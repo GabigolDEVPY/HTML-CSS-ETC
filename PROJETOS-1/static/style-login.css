@@ -18,12 +18,12 @@ body {
 }
 
 .login-form h1 {
-    color: rgb(125, 70, 255);
+    color: #7d45ff;
     font-weight:bold;
 }
 
 .login-form label {
-    color: rgb(125, 70, 255);
+    color: #7d46ff;
     display: flex;
     margin-left: 40px;
     font-weight: bold;
@@ -33,7 +33,7 @@ body {
     width: 220px;
     height: 25px;
     border-radius: 10px;
-    border: rgb(125, 70, 255);
+    border: #7d46ff;
 
 }
 
@@ -41,7 +41,7 @@ body {
     width: 160px;
     height: 30px;
     border-radius: 10px;
-    background-color:  rgb(125, 70, 255);
+    background-color:  #7d46ff;
     border: none;
     color: white;
     cursor: pointer;
@@ -50,7 +50,7 @@ body {
 }
 
 .btn button:hover{
-    background-color: rgb(109, 46, 255)
+    background-color: #6d2eff
 
 
 }
