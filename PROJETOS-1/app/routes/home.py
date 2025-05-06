@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 home_bp = Blueprint('home', __name__)
 
@@ -32,6 +32,8 @@ users = [
 
 
 
-@home_bp.route("/home", methods=["GET", "POST"])
+@home_bp.route("/home", methods=["POST"])
 def retornar_home():
+    data = request.form.to_dict()
+    print(data)
     return render_template("home.html", users=users)

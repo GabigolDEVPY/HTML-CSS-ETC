@@ -9,22 +9,27 @@
 <body>
     <div class="register">
         <h1>Registrar</h1>
-        <form action="{{url_for()}}">
+        <form action="{{url_for('register.register_user')}}" method="POST">
             <div class="linha">
                 <label for="">E-mail</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="linha">
                 <label for="">Nome</label>
-                <input type="text" id="nome" required>
+                <input type="text" id="nome" name="nome" required>
             </div>
             <div class="linha">
                 <label for="">Key</label>
-                <input type="Key" id="Key" required>
+                <input type="Key" id="Key" name="key" required>
             </div>
             <div class="linha">
                 <label for="">Senha</label>
-                <input type="password" id="password" required>
+                <input type="password" id="password" name="email"required>
+            </div>
+            <div class="error">
+                {% if error %}
+                    {{error}}
+                {% endif %}
             </div>
             <div class="buttons">
                 <button type="submit">Registrar</button>

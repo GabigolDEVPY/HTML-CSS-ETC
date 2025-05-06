@@ -65,3 +65,8 @@ body {
 
 }
 
+.error {
+    min-height: 25px;
+    font-weight:lighter;
+    color: #ff0000;
+}
