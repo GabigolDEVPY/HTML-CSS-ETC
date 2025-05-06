@@ -8,4 +8,7 @@ def create_app():
     from app.routes.home import home_bp
     app.register_blueprint(home_bp)
     
+    from app.routes.register import register_bp
+    app.register_blueprint(register_bp)
+    
     return app

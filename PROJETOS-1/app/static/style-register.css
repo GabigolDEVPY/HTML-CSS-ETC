@@ -1,4 +1,67 @@
 body {
-    background: linear-gradient(to right, #f9d5ec, #a18cd1)
+    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register {
+    border-radius: 10px;
+    margin-top: 80px;
+    background-color: #ffffff;
+    height: 550px;
+    width: 450px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.13);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #7d45ff;
+    font-weight: bold;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register input {
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border: None;
+    background-color: #e9e1ff;
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
 }
+
+.buttons button {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7d45ff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #7134ff;
+
+}
+
