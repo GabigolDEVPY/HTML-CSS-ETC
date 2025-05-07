@@ -18,15 +18,37 @@
     </header>
     <div class="space-edit">
         <form action="">
+            <div class="linha">
+                <label for="Name">Nome do item</label>
+                <input type="text" name="nome" maxlength="50" required>
+            </div>
+            <div class="linha">
+                <label for="Name">Breve descrição</label>
+                <textarea id="descricao" type="text" name="descricao" maxlength="210" required></textarea>
+            </div>
+            <div class="linha">
+                <label for="Name">Tipo</label>
+                <select name="tipo" id="tipo" required>
+                    <option value="">selecione...</option>
+                    <option value="Móveis">Móveis</option>
+                    <option value="">Eletrodomésticos</option>
+                    <option value="">Eletrônicos</option>
+                    <option value="">Comida</option>
+                    <option value="">Bebidas</option>
+                    <option value="">Roupas</option>
+                    <option value="">Acessórios</option>
+                    <option value="">Outros</option>
+                </select>
+            </div>
+            <div class="linha">
+                <label for="Preco">Preço</label>
+                <input style="text-align: right;" placeholder="R$ 0,00" type="number" name="preco" step="0.01" id="preco" min="0" required>
+            </div>
+            <div class="btn">
+                <button type="submit">Registrar</button>
 
-
-
-
-
+            </div>
         </form>
-
-
-
     </div>
 </body>
 </html>

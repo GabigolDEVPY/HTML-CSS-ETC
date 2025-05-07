@@ -1,9 +1,75 @@
 .space-edit {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
+    height: 500px;
     width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #a18cd1;
+}
+
+.linha input {
+    border-radius: 10px;
+    height: 25px;
+    width: 300px;
+    border: none;
+    background: linear-gradient(to right, #f9d5ec, #a18cd1)
+}
+
+.linha select {
+    border-radius: 10px;
+    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    height: 30px;
+}
+
+.btn {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn input {
+    border-radius: 10px;
+}
+
+.btn button {
+    background-color: #7d46ff;
+    border-radius: 10px;
+    border: none;
+    height: 35px;
+    width: 100px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn button:hover{
+    background-color: #621fff;
+}
+
+#descricao {
+    height: 100px;
+    resize: none;
+    padding: 5px;
+    vertical-align: top;
+    overflow: auto;
+}
+
+
+.linha textarea {
+    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    border-radius: 10px;
+    border: none;
 }

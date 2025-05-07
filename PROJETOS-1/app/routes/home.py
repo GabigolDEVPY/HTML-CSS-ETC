@@ -25,4 +25,4 @@ def retornar_home():
             print(session)
             return render_template("home.html", users=users)
         else:
-            abort(404)
+            abort(403)
