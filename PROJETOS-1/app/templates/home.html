@@ -8,9 +8,9 @@
 <body>
     <header class="header">
         <a><h2>Home</h2></a>
-        <a href="{{ url_for('login.return_login')}}"><h2>Log-out</h2></a>
+        <a href="{{ url_for('home.logout')}}"><h2>Log-out</h2></a>
         <h1 style="font-size: 25px;">CadastreAqui</h1>
-        <a><h2>Adicionar</h2></a>
+        <a href="{{ url_for('add.return_add')}}"><h2>Adicionar</h2></a>
         <a><h2>Editar</h2></a>
         <a><h2>Excluir</h2></a>
     </header>
