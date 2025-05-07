@@ -2,9 +2,16 @@ from flask import Blueprint, render_template, request, session, redirect, url_fo
 
 home_bp = Blueprint('home', __name__)
 
-users = [
-    {"name": "Gabriel", "key": 1231231, "points": 3322, "number": 998473289},
-    {"name": "Gabriel", "key": 1231231, "points": 3322, "number": 998473289}
+itens = [
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
+    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312}
 ]
 
 @home_bp.route("/logout")
@@ -19,10 +26,10 @@ def retornar_home():
         data = request.form.to_dict()
         session['email'] = data['email']
         session['senha'] = data['senha']
-        return render_template("home.html", users=users)
+        return render_template("home.html", itens=itens)
     if request.method == "GET":
         if 'email' and 'senha' in session:
             print(session)
-            return render_template("home.html", users=users)
+            return render_template("home.html", itens=itens)
         else:
             abort(403)
