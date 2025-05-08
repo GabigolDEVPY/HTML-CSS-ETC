@@ -11,7 +11,7 @@
         <a href="{{ url_for('home.logout')}}"><h2>Log-out</h2></a>
         <h1 style="font-size: 25px;">CadastreAqui</h1>
         <a href="{{ url_for('add.return_add')}}"><h2>Adicionar</h2></a>
-        <a><h2>Editar</h2></a>
+        <a href="{{ url_for('edit.return_edit')}}"><h2>Editar</h2></a>
         <a><h2>Excluir</h2></a>
     </header>
     {% if itens %}
@@ -34,7 +34,7 @@
             </div>
             {% endfor%}    
     {% else %}
-        <h2 style="font-family: Arial, Helvetica, sans-serif;">Não há usuários</h2>
+        <h2 style="font-family: Arial, Helvetica, sans-serif;">Não há produtos</h2>
     {% endif %} 
     </div>
 </body>

@@ -74,3 +74,27 @@
     border-radius: 10px;
     border: 1px solid #a18cd1;
 }
+
+.linha-edit-form .linha form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #a18cd1;
+    align-items: center;
+    gap: 10px;
+}
+
+.linha-edit-form .linha button{
+    background-color: #7d46ff;
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.linha-edit-form .linha button:hover{
+    background-color: #621fff;
+}

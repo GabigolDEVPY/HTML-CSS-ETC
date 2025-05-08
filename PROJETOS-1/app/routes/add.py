@@ -11,6 +11,7 @@ def return_add():
             return render_template("add.html")
         if request.method == "POST":
             data = request.form.to_dict()
+            itens.append(data)
             return render_template("add.html")
     else:
         abort(403)      

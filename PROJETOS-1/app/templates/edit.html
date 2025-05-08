@@ -13,45 +13,61 @@
         <a href="{{ url_for('login.return_login')}}"><h2>Log-out</h2></a>
         <h1 style="font-size: 25px;">CadastreAqui</h1>
         <a href="{{ url_for('add.return_add')}}"><h2>Adicionar</h2></a>
-        <a><h2>Editar</h2></a>
+        <a href="{{ url_for('edit.return_edit')}}"><h2>Editar</h2></a>
         <a><h2>Excluir</h2></a>
     </header>
-    <div class="space-edit">
-        <form action="{{ url_for('add.return_add')}}" method="POST">
-            <div class="linha">
-                <label for="Name">Nome do produto</label>
-                <input type="text" name="name" maxlength="50" required>
-            </div>
-            <div class="linha">
-                <label for="Url">URL Foto</label>
-                <input type="text" name="url" required>
-            </div>
-            <div class="linha">
-                <label for="Name">Breve descrição</label>
-                <textarea id="descricao" type="text" name="description" maxlength="210" required></textarea>
-            </div>
-            <div class="linha">
-                <label for="Name">Tipo</label>
-                <select name="type" id="tipo" required>
-                    <option value="">selecione...</option>
-                    <option value="Móveis">Móveis</option>
-                    <option value="Eletrodomésticos">Eletrodomésticos</option>
-                    <option value="Eletrônicos">Eletrônicos</option>
-                    <option value="Comida">Comida</option>
-                    <option value="Bebidas">Bebidas</option>
-                    <option value="Roupas">Roupas</option>
-                    <option value="Acessórios">Acessórios</option>
-                    <option value="Outros">Outros</option>
-                </select>
-            </div>
-            <div class="linha">
-                <label for="Preco">Preço</label>
-                <input style="text-align: right;" placeholder="R$ 0,00" type="number" name="price" step="0.01" id="preco" min="0" required>
-            </div>
-            <div class="btn">
-                <button type="submit">Registrar</button>
-            </div>
-        </form>
+    <div class="linha-edit-form">
+        <div class="linha">
+            <form action="{{ url_for('edit.return_product')}}" method="get">
+                <label for="Name">ID do produto</label>
+                <input type="text" name="id" maxlength="50" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </div>
+
+    {% if error %}
+        <p>Erro</p>
+    {% endif %}    
+    {% if product %}
+        <p>OK</p>
+        <div class="space-edit">
+            <form action="{{ url_for('add.return_add')}}" method="POST">
+                <div class="linha">
+                    <label for="Name">Nome do produto</label>
+                    <input type="text" name="name" maxlength="50" required>
+                </div>
+                <div class="linha">
+                    <label for="Url">URL Foto</label>
+                    <input type="text" name="url" required>
+                </div>
+                <div class="linha">
+                    <label for="Name">Breve descrição</label>
+                    <textarea id="descricao" type="text" name="description" maxlength="210" required></textarea>
+                </div>
+                <div class="linha">
+                    <label for="Name">Tipo</label>
+                    <select name="type" id="tipo" required>
+                        <option value="">selecione...</option>
+                        <option value="Móveis">Móveis</option>
+                        <option value="Eletrodomésticos">Eletrodomésticos</option>
+                        <option value="Eletrônicos">Eletrônicos</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Roupas">Roupas</option>
+                        <option value="Acessórios">Acessórios</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="linha">
+                    <label for="Preco">Preço</label>
+                    <input style="text-align: right;" placeholder="R$ 0,00" type="number" name="price" step="0.01" id="preco" min="0" required>
+                </div>
+                <div class="btn">
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>  
+    {% endif %}  
 </body>
 </html>
