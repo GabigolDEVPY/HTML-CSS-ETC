@@ -21,6 +21,7 @@
         <div class="display-products">
             {% for item in itens %}
             <div class="item">
+                <label style="color:black; margin-top:10px; font-size:10px" for="name">ID:{{ item.id}}</label>
                 <div class="image">
                     <img src="{{ item.url }}" alt="Clique para ver a foto" width="180">
                 </div>

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, session, abort
-
+from ..db.dados import itens
 
 add_bp = Blueprint("add", __name__)
 
@@ -10,8 +10,7 @@ def return_add():
         if request.method == "GET":
             return render_template("add.html")
         if request.method == "POST":
-            dados = request.form.to_dict()
-            print(dados)
+            data = request.form.to_dict()
             return render_template("add.html")
     else:
         abort(403)      
