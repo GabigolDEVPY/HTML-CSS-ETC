@@ -17,6 +17,7 @@ def return_edit():
         
 @edit_bp.route('/return-product', methods=["GET"])
 def return_product():
-    product = [1]
+    product = []
     product_id = request.args.get('id')
-    return render_template("edit.html", product=product)             
+    return render_template("edit.html", error="erro")             
+    # return render_template("edit.html", product=product)             

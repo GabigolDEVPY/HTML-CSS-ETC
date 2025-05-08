@@ -21,16 +21,15 @@
             <form action="{{ url_for('edit.return_product')}}" method="get">
                 <label for="Name">ID do produto</label>
                 <input type="text" name="id" maxlength="50" required>
-                <button type="submit">Buscar</button>
+                {% if error %}
+                    <p style="color: red;">Produto não encontrado</p>
+                {% endif %}    
+                <button style="color: white;" type="submit">Buscar</button>
             </form>
         </div>
     </div>
 
-    {% if error %}
-        <p>Erro</p>
-    {% endif %}    
     {% if product %}
-        <p>OK</p>
         <div class="space-edit">
             <form action="{{ url_for('add.return_add')}}" method="POST">
                 <div class="linha">
