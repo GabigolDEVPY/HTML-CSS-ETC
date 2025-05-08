@@ -19,6 +19,7 @@ body {
     gap: 30px;
     cursor: pointer;
     top: 0;
+    z-index: 999;
 }
 
 
@@ -50,7 +51,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 25px;
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
     color: #a18cd1;
 }
@@ -60,16 +61,16 @@ body {
     align-items:center;
     flex-direction: column;
     background: white;
-    height: 370px;
+    height: auto;
     border-radius: 10px;
     margin: 35px;
     justify-content:flex-start;
-    width: 240px;
+    width: 260px;
     color: #a18cd1;
-    text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
     cursor: pointer;
+    max-width: 260px;
 }
 
 .item:hover{
@@ -78,11 +79,28 @@ body {
 
 .image {
     margin-top: 20px;
+    border-radius: 10px;
     align-items: center;
     border: 4px solid #a18cd1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 184px;
+    height: 184px;
+}
+
+.infos {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 200px;
+    text-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.infos p {
+    word-wrap: break-word;
+
 }

@@ -1,18 +1,8 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, abort
+from ..db.dados import itens
+itens = itens
 
 home_bp = Blueprint('home', __name__)
-
-itens = [
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312},
-    {"name": "Telefone", "description": "231fasdfsdaafsadfsd231", "url": "https://mkt.multilaser.com.br/emkt/mkt/resizer/2022/laminas-html/office/TC065/assets/img/tc193_00.jpg", "type": "casa", "price": 12312}
-]
 
 @home_bp.route("/logout")
 def logout():

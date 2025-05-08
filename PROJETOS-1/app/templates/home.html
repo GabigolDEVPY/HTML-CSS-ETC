@@ -22,13 +22,13 @@
             {% for item in itens %}
             <div class="item">
                 <div class="image">
-                    <img src="{{ item.url }}" alt="Clique para ver a foto" width="150" height="150">
+                    <img src="{{ item.url }}" alt="Clique para ver a foto" width="180">
                 </div>
-                <div>
-                    <label for="name">{{ item.name}}</label>
-                    <label for="item.description">{{ item.description}}</label>
-                    <label for="type">{{ item.type}}</label>
-                    <label for="Number">{{ item.price}}</label>
+                <div class="infos">
+                    <label style="font-weight: bold; color:black;" for="name">{{ item.name}}</label>
+                    <p style="color:black;" type="text">{{ item.description}}</p>
+                    <label style="margin-bottom: 10px; color:rgb(0, 225, 255);" for="type">{{ item.type}}</label>
+                    <label style="color:rgb(0, 116, 19); font-weight: bold; font-size:20px" for="Number">R$ {{ item.price}}</label>
                 </div>
             </div>
             {% endfor%}    

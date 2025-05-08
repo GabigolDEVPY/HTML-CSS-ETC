@@ -9,5 +9,9 @@ def return_add():
     if 'email' and 'senha' in session:
         if request.method == "GET":
             return render_template("add.html")
+        if request.method == "POST":
+            dados = request.form.to_dict()
+            print(dados)
+            return render_template("add.html")
     else:
         abort(403)      
