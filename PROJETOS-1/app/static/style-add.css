@@ -1,4 +1,4 @@
-.space-edit {
+.space-add {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,30 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.space-edit {
+    margin-top: 40px;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 2rem;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
 }
 
 .linha {
@@ -39,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 6px;
 }
 
 .btn input {
