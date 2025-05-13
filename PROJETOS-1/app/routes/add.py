@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, session, abort
-from ..utils.add_functs import addProduct
+from ..utils.add_product import addProduct
 
 add_bp = Blueprint("add", __name__)
 

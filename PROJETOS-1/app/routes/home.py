@@ -16,9 +16,9 @@ def retornar_home():
         session['senha'] = data['senha']
         itens = ["1"]
         return render_template("home.html", itens=itens)
+    
     if request.method == "GET":
         if 'email' and 'senha' in session:
-            print(session)
             itens = ["1"]
             return render_template("home.html", itens=itens)
         else:
