@@ -11,10 +11,10 @@ def addProduct(data, email):
 
     if id_bd:
         url = "fsdfjsdkjfkjsdfkds"
-        cursor.execute("""INSERT INTO produtos ( usuario_id, nome, descricao, img_url, tipo, url_reference)
-                        VALUES (%s, %s, %s, %s, %s, %s)
+        cursor.execute("""INSERT INTO produtos ( usuario_id, nome, descricao, img_url, tipo, preco, url_reference)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s)
                     """,
-                    (int(id_bd['id']), data["name"], data["description"], data["url"], data["type"], url))
+                    (int(id_bd['id']), data["name"], data["description"], data["url"], data["type"], data['preco'], url))
         connection.commit()
 
         return render_template("add.html", mensagem="Produto cadastrado com sucesso")

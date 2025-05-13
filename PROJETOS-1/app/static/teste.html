@@ -1,0 +1,43 @@
+<div class="login-form">
+    <h1>LOGIN</h1>
+    <style>
+    </style>
+    <form action="{{ url_for('home.retornar_home') }}" method="POST">
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Senha</label><br>
+        <input type="password" id="password" name="senha" required><br><br>
+        {% if error %}
+            <h3>{{ error }}</h3>
+        {% else %}
+            <div class="aviso-container">
+                <div class="aviso">🔴</div>
+            </div>
+        {% endif %}
+        <div class="btn">
+            <button type="submit">Logar</button>
+            <button type="button" onclick="window.location.href='{{ url_for('register.return_register') }}'">Registrar</button>
+        </div>
+    </form>
+</div>
+
+.login-form {
+    position: relative; 
+}
+
+.aviso-container {
+    position: absolute; 
+    top: 10px;       
+    left: 10px;      
+}
+
+.aviso {
+    min-width: 20px; 
+    height: 20px;    
+    background-color: red;
+    border-radius: 50%; 
+    color: transparent; 
+    text-align: center; 
+    line-height: 20px; 
+    font-size: 14px;   
+}

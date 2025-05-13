@@ -8,6 +8,11 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.space-add:hover{
+    transform: scale(1.05);
 }
 
 .space-edit {

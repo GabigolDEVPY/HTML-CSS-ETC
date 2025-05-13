@@ -14,10 +14,12 @@
             <input type="email" id="email" name="email" required><br><br>
             <label for="password">Senha</label>
             <input type="password" id="password" name="senha" required><br><br>
-            {% if error %}
-                <h3>{{ error }}</h3>
-            {% endif %}
             <div class="btn">
+                <div class="error-message">
+                    {% if error %}
+                        <h3>{{ error }}</h3>
+                    {% endif %}
+                </div>
                 <button type="submit">Logar</button>
                 <button type="button"onclick="window.location.href='{{ url_for('register.return_register') }}'">Registrar</button>
             </div>

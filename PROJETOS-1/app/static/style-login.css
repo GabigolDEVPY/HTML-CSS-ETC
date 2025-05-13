@@ -29,6 +29,7 @@ body {
     display: flex;
     margin-left: 45px;
     font-weight: bold;
+    position: relative;
 }
 
 .login-form input {
@@ -42,10 +43,11 @@ body {
 
 .btn {
     margin-top: 70px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+
 
 }
 
@@ -63,5 +65,11 @@ body {
 
 .btn button:hover{
     background-color: #6d2eff
+}
+
+.error-message {
+    height: 30px;
+    font-size: 12px;
+    color: red;
 }
 
