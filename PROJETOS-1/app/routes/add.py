@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, session, abort
 from ..db.dados import itens
+from ..utils.add import addProduct
 
 add_bp = Blueprint("add", __name__)
 
@@ -9,9 +10,10 @@ def return_add():
     if 'email' and 'senha' in session:
         if request.method == "GET":
             return render_template("add.html")
-        if request.method == "POST":
+        
+        elif request.method == "POST":
             data = request.form.to_dict()
             itens.append(data)
-            return render_template("add.html")
+            return render_template("add.html", mensagem="Produto cadastrado com sucesso")
     else:
         abort(403)      

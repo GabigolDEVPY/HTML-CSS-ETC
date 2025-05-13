@@ -48,6 +48,9 @@
                 <label for="Preco">Preço</label>
                 <input style="text-align: right;" placeholder="R$ 0,00" type="number" name="price" step="0.01" id="preco" min="0" required>
             </div>
+            {% if error %}
+                <label id="alert">{{ mensagem }}</label>
+            {% endif %}    
             <div class="btn">
                 <button type="submit">Registrar</button>
             </div>
