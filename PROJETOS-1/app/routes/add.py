@@ -12,6 +12,6 @@ def return_add():
         
         if request.method == "POST":
             data = request.form.to_dict()
-            return addProduct()
+            return addProduct(data, email=session['email'])
     else:
         abort(403)      
