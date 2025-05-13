@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, abort
-from ..db.dados import itens as it
 
 home_bp = Blueprint('home', __name__)
 
@@ -15,12 +14,12 @@ def retornar_home():
         data = request.form.to_dict()
         session['email'] = data['email']
         session['senha'] = data['senha']
-        itens = it
+        itens = ["1"]
         return render_template("home.html", itens=itens)
     if request.method == "GET":
         if 'email' and 'senha' in session:
             print(session)
-            itens = it
+            itens = ["1"]
             return render_template("home.html", itens=itens)
         else:
             abort(403)
