@@ -19,7 +19,7 @@ def return_product():
     # conexao SQL
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
-    cursor.execute("SELECT nome, descricao, img_url, preco, tipo FROM produtos WHERE id = %s",(product_id,))
+    cursor.execute("SELECT id, nome, descricao, img_url, preco, tipo FROM produtos WHERE id = %s",(product_id,))
     product = cursor.fetchone()
     print(product)
     
@@ -30,6 +30,11 @@ def return_product():
 
 @edit_bp.route('/edit-product', methods=["POST"])
 def edit_product():
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
     dados = request.form.to_dict()
     print(dados)
+    valores = (dados['nome'], dados['descricao'], dados['img_url'], dados['preco'], dados['tipo'], int(dados['id']))
+    cursor.execute("UPDATE produtos SET nome = %s, descricao = %s, img_url = %s, preco = %s, tipo = %s WHERE id= %s", valores)
+    connection.commit()
     return render_template("edit.html")

@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    background: linear-gradient(to right, #99d9ff, #52c0ff);
 }
 
 
@@ -20,12 +20,12 @@ body {
 }
 
 .login-form h1 {
-    color: #7d45ff;
+    color: #52c0ff;
     font-weight:bold;
 }
 
 .login-form label {
-    color: #7d46ff;
+    color: #52c0ff;
     display: flex;
     margin-left: 45px;
     font-weight: bold;
@@ -36,8 +36,8 @@ body {
     width: 280px;
     height: 30px;
     border-radius: 10px;
-    border: #7d46ff;
-    background-color: #e9e1ff;
+    border: #52c0ff;
+    background-color: #d4efff;
 
 }
 
@@ -55,7 +55,7 @@ body {
     width: 220px;
     height: 40px;
     border-radius: 10px;
-    background-color:  #7d46ff;
+    background-color:  #52c0ff;
     border: none;
     color: white;
     cursor: pointer;
@@ -64,7 +64,7 @@ body {
 }
 
 .btn button:hover{
-    background-color: #6d2eff
+    background-color: #52c0ff
 }
 
 .error-message {

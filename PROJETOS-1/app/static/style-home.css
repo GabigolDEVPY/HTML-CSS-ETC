@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     color: aliceblue;
-    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    background: linear-gradient(to right, #99d9ff, #52c0ff);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 10px;
     gap: 30px;
@@ -34,7 +34,7 @@ body {
 }
 
 .display-products {
-    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    background: linear-gradient(to right, #99d9ff, #52c0ff);
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,7 +53,7 @@ body {
     margin: 25px;
     font-size: 30px;
     font-weight: bold;
-    color: #a18cd1;
+    color: #52c0ff;
 }
 
 
@@ -68,7 +68,7 @@ body {
     margin: 35px;
     justify-content:flex-start;
     width: 260px;
-    color: #a18cd1;
+    color: #52c0ff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -83,7 +83,7 @@ body {
     margin-top: 5px;
     border-radius: 10px;
     align-items: center;
-    border: 4px solid #a18cd1;
+    border: 4px solid #52c0ff;
     display: flex;
     flex-direction: column;
     justify-content: center;

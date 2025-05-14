@@ -45,22 +45,22 @@
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #a18cd1;
+    color: #52c0ff;
 }
 
 .linha input {
     border-radius: 10px;
     height: 25px;
     width: 300px;
-    border: 1px solid #a18cd1;
-    background: linear-gradient(to right, #f9d5ec, #a18cd1)
+    border: 1px solid #52c0ff;
+    background: linear-gradient(to right, #99d9ff, #52c0ff)
 }
 
 .linha select {
     border-radius: 10px;
-    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    background: linear-gradient(to right, #99d9ff, #52c0ff);
     height: 30px;
-    color: #a18cd1;
+    color: #52c0ff;
 }
 
 .btn {
@@ -76,7 +76,7 @@
 }
 
 .btn button {
-    background-color: #7d46ff;
+    background-color: #52c0ff;
     border-radius: 10px;
     border: none;
     height: 35px;
@@ -87,7 +87,7 @@
 }
 
 .btn button:hover{
-    background-color: #621fff;
+    background-color: #2fb3ff;
 }
 
 #descricao {
@@ -100,9 +100,9 @@
 
 
 .linha textarea {
-    background: linear-gradient(to right, #f9d5ec, #a18cd1);
+    background: linear-gradient(to right, #99d9ff, #52c0ff);
     border-radius: 10px;
-    border: 1px solid #a18cd1;
+    border: 1px solid #52c0ff;
 }
 
 .linha-edit-form .linha form{
@@ -111,13 +111,13 @@
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #a18cd1;
+    color: #52c0ff;
     align-items: center;
     gap: 10px;
 }
 
 .linha-edit-form .linha button{
-    background-color: #7d46ff;
+    background-color: #52c0ff;
     height: 30px;
     width: 100px;
     border: none;
@@ -126,11 +126,10 @@
 }
 
 .linha-edit-form .linha button:hover{
-    background-color: #621fff;
+    background-color: #17aaff;
 }
 
 #alert {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
