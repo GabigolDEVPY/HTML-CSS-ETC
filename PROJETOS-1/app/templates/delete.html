@@ -14,11 +14,11 @@
         <h1 style="font-size: 25px;">CadastreAqui</h1>
         <a href="{{ url_for('add.return_add')}}"><h2>Adicionar</h2></a>
         <a href="{{ url_for('edit.return_edit')}}"><h2>Editar</h2></a>
-        <a><h2>Excluir</h2></a>
+        <a href="{{ url_for('delete.return_delete')}}"><h2>Excluir</h2></a>
     </header>
     <div class="linha-edit-form">
         <div class="linha">
-            <form action="{{ url_for('edit.return_product')}}" method="GET">
+            <form action="{{ url_for('delete.delete_product')}}" method="GET">
                 <label for="Name">ID do produto para ser exluido</label>
                 <input type="text" name="id" maxlength="50" required>
                 {% if error %}

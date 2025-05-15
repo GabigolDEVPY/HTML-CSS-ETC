@@ -17,4 +17,7 @@ def create_app():
     from app.routes.edit import edit_bp
     app.register_blueprint(edit_bp)
     
+    from app.routes.delete import delete_bp
+    app.register_blueprint(delete_bp)
+    
     return app
