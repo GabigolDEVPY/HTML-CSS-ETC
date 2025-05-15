@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 .space-add {
     margin-top: 40px;
     display: flex;
@@ -132,4 +137,34 @@
 #alert {
     font-family: Arial, Helvetica, sans-serif;
 
+}
+
+@media (max-width: 600px) {
+    .space-add {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .linha input,
+    .linha select,
+    .linha textarea {
+        width: 100%;
+    }
+
+    .space-edit {
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .btn button {
+        width: 100%;
+    }
+
+    .linha-edit-form .linha form {
+        width: 100%;
+        padding: 0 10px;
+    }
 }
