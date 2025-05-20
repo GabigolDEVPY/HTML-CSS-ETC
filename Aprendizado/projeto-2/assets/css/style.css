@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../img/Simple Shiny.svg");
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.menu {
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: None;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+    color: black;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.menu-content h1 {
+    font-size: 2.5rem;
+}
+
+.intro div h2 {
+    margin-top: 14rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.intro {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20rem;
+}
+
+.textos-1 {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start; /* centraliza o conteúdo horizontalmente */
+    gap: 2rem;
+    padding: 3rem;
+    width: 60%;
+    max-width: 120rem;
+}
+
+
+.grid {
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid: 60%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.content {
+    width: 50%;
+
+}
+.content h3 {
+    font-size: 24px;
+}
+
+.cubo-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
